@@ -108,21 +108,21 @@ window.addEventListener('load', () => {
     }
 
     //limpiar los valores
-    if(nombreValor && correoValor && asuntoValor && mensajeValor) {
+  /*  if(nombreValor && correoValor && asuntoValor && mensajeValor) {
       nombre.value= "";
       correo.value= "";
       asunto.value= "";
       mensaje.value= "";
-    } 
+    } */
 
-    /*if (
+    if (
       nombre.parentElement.classList.contains('ok') &&
       correo.parentElement.classList.contains('ok') &&
       asunto.parentElement.classList.contains('ok') &&
       mensaje.parentElement.classList.contains('ok')
     ) {
       formulario.reset();
-    } */
+    } 
 
 
   }
