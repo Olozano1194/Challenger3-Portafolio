@@ -22,7 +22,7 @@ NameField.addEventListener("blur",  validateEmptyField);
 emailField.addEventListener("blur",  validateEmptyField);
 asuntoField.addEventListener("blur",  validateEmptyField);
 mensajeFieldField.addEventListener("blur", (e) => validateEmptyField); */
-
+const btnEnviar = document.querySelector('.btn');
 window.addEventListener('load', () => {
 
   const formulario = document.querySelector('#formulario');
@@ -30,9 +30,10 @@ window.addEventListener('load', () => {
   const correo = document.getElementById('correo');
   const asunto = document.getElementById('asunto');
   const mensaje = document.getElementById('mensaje');
+  
 
   //const inputs = document.querySelectorAll('#formulario input');
-
+  
   formulario.addEventListener('submit', (e) => {
     e.preventDefault();
     validarCampos();
@@ -47,32 +48,37 @@ window.addEventListener('load', () => {
     const asuntoValor = asunto.value.trim();
     const mensajeValor = mensaje.value.trim();
 
+    //validar lo del boton
+    let camposValidos = true;
     //validacion del campo nombre
     if (!nombreValor) {
-     // console.log('campo vacio');
-
       validacionFallo(nombre, 'Campo Vacío')
+      camposValidos = false;
 
     } else if(nombreValor.length < 5){
-      validacionFallo(nombre, 'Nombre demasiado corto (minimo 5 caracteres');
+      validacionFallo(nombre, 'Nombre demasiado corto (minimo 5 caracteres)');
+      camposValidos = false;
 
     } else if (nombreValor.length > 50) {
-      //console.log('Nombre demasiado largo');
-      validacionFallo(nombre, 'Nombre demasiado largo (máximo 50 caracteres');
+      validacionFallo(nombre, 'Nombre demasiado largo (máximo 50 caracteres)');
+      camposValidos = false;
+
     } else if (!/^[a-zA-Z\s]*$/.test(nombreValor)) {
-      //console.log('nombre Invalido');
       validacionFallo(nombre, 'Nombre Inválido(sólo se permiten letras y espacios)');
+      camposValidos = false;
+
     } else {
       validacionOk(nombre);
     }
 
     //validacion del campo correo
     if (!correoValor) {
-
       validacionFallo(correo, 'Campo vacío');
+      camposValidos = false;
 
     } else if (!validacionCorreo(correoValor)) {
       validacionFallo(correo, 'El correo no es valido');
+      camposValidos = false;
 
     } else {
       validacionOk(correo);
@@ -85,7 +91,7 @@ window.addEventListener('load', () => {
 
     } else if (asuntoValor.length > 50) {
      // console.log('Nombre demasiado largo');
-      validacionFallo(asunto, 'Nombre demasiado largo (máximo 50 caracteres');
+      validacionFallo(asunto, 'Nombre demasiado largo (máximo 50 caracteres)');
 
     } else if (!/^[a-zA-Z\s]*$/.test(asuntoValor)) {
      // console.log('nombre Invalido');
@@ -96,34 +102,26 @@ window.addEventListener('load', () => {
 
     //validar el campo mensaje
     if (!mensajeValor) {
-     // console.log('campo vacio');
-      validacionFallo(mensaje, 'Campo Vacío')
+     
+      validacionFallo(mensaje, 'Campo Vacío');
+      camposValidos = false;
 
     } else if (mensajeValor.length > 300) {
-     // console.log('Nombre demasiado largo');
-      validacionFallo(mensaje, 'El mensaje demasiado largo (máximo 300 caracteres');
+      validacionFallo(mensaje, 'El mensaje demasiado largo (máximo 300 caracteres)');
+      camposValidos = false;
 
     } else {
       validacionOk(mensaje);
     }
 
-    //limpiar los valores
-  /*  if(nombreValor && correoValor && asuntoValor && mensajeValor) {
-      nombre.value= "";
-      correo.value= "";
-      asunto.value= "";
-      mensaje.value= "";
-    } */
+    //Habolitar o desabilitar el botón de envio segun los campos sean validos
+    btnEnviar.disabled = !camposValidos;
 
-    if (
-      nombre.parentElement.classList.contains('ok') &&
-      correo.parentElement.classList.contains('ok') &&
-      asunto.parentElement.classList.contains('ok') &&
-      mensaje.parentElement.classList.contains('ok')
-    ) {
+    //si los campos son validos, habilitar el boton de encio
+    if (camposValidos) {
       formulario.reset();
-    } 
-
+      location.reload();
+    }
 
   }
 
@@ -150,53 +148,3 @@ window.addEventListener('load', () => {
 
 
 });
-
-
-
-/*const expresiones = {
-  nombre: /^[a-zA-zÁ-ÿ\s]{1,50}$/,
-  correo:/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-  asunto:  /^[a-zA-zÁ-ÿ\s]{1,50}$/,
-  mensaje: /^[a-zA-zÁ-ÿ\s]{1,300}$/
-}
-
-const validarFormulario = (e) => {
-  switch(e.target.name){
-
-    case "nombre":
-      if(expresiones.nombre.test(e.target.value)){
-        document.getElementById('nombre').classList.remove('nombre_incorrecto');
-        document.getElementById('nombre').classList.remove('nombre_correcto');
-      }else {
-        document.getElementById('nombre').classList.add('nombre_incorrecto');
-      }
-
-    break;
-
-    case "correo":
-
-    break;
-
-    case "asunto":
-
-    break;
-
-    case "mensaje":
-
-    break;
-
-
-  } 
-}
-inputs.forEach((input) => {
-
-  input.addEventListener('keyup', validarFormulario);
-  input.addEventListener('blur', validarFormulario);
-});
-
-formulario.addEventListener('submit', (e) => {
-
-    e.preventDefault;
-
-
-}); */
