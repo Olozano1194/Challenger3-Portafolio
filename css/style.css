@@ -92,6 +92,7 @@ header .textos {
 header .textos .primera_linea,
 header .textos .segunda_linea {
     padding: 10px;
+    
 
 }
 
@@ -166,8 +167,9 @@ header .redes_sociales .curriculo:hover {
     font-size: 34px;
     margin-bottom: 40px;
     font-weight: 300;
-    color: #dd820d;
+    color: #464646;
     text-align: center;
+    
 }
 
 /*-------------------Skills----------------*/
@@ -184,6 +186,7 @@ header .redes_sociales .curriculo:hover {
 
 .main .skills .titulo {
     font-size: 34px;
+    margin-top: 20px;
     margin-bottom: 40px;
     font-weight: 300;
     color: #464646;
@@ -194,7 +197,7 @@ header .redes_sociales .curriculo:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .main .skill a {
@@ -266,7 +269,7 @@ header .redes_sociales .curriculo:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .main .hobies a {
@@ -293,7 +296,7 @@ header .redes_sociales .curriculo:hover {
 
 .main .formacion_academica {
     background: #f2f2f2;
-    padding: 50px;
+    padding: 30px 0;
 } 
 
 .main .formacion_academica .contenedor {
@@ -311,11 +314,10 @@ header .redes_sociales .curriculo:hover {
 }
 
 .main .formacion_academica .contenedor_academica {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-evenly; 
 } 
 
 .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
@@ -370,18 +372,11 @@ header .redes_sociales .curriculo:hover {
     text-align: center;
 }
 
-/*.main .experiencia_profesional .contenedor_experiencia {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-} */
-
 .main .experiencia_profesional .contenedor_experiencia .experiencia {
     display: flex;
     width: 100%;
     margin-bottom: 40px;
+    justify-content: space-evenly;
 }
 
 .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb {
@@ -689,7 +684,7 @@ footer .copyright .contenedor p {
     }
 
     header .primera_linea {
-        margin-top: 140px;
+        margin-top: 130px;
     }
 
     header .li-respon {
@@ -731,6 +726,10 @@ footer .copyright .contenedor p {
         text-align: center;
     }
 
+    .main .sobre_mi .foto-perfil {
+        margin-top: 20px;
+    }
+
     .main .formacion_academica .descripcion .nombre {
         margin-right: -15px;
         margin-top: 20px;
@@ -753,9 +752,15 @@ footer .copyright .contenedor p {
         
     }
 
+    .main .experiencia_profesional .btn_repositorio {
+        margin-right: 15px;
+    }
+
     footer .contacto .contenedor .formulario .btn {
         
-        margin: auto 210px;
+        margin-left: 270px;
+        margin-top: 20px;
+        
     }
 
     footer .contacto    input[type="text"],
@@ -770,12 +775,40 @@ footer .copyright .contenedor p {
         
     }
 
+    footer .contacto .p-contacto {
+        margin-left: 30px;
+    }
+
     footer .copyright .contenedor p {
-        margin-top: -40px;
+        margin-top: -60px;
     }
 }
 
 @media screen and (max-width: 600px) {
+
+    header .logo .logo-Nombre {
+        font-size: 14px;
+    }
+
+    header .menu-responsivo {
+        margin-left: 200px;
+    }
+    header .primera_linea {
+        margin-top: 100px;
+        font-size: 14px;
+    }
+
+    header .segunda_linea {
+        font-size: 14px;
+    }
+
+    header .redes_sociales {
+       
+    }
+
+    .main .sobre_mi .foto-perfil {
+        margin-top: 30px;
+    }
 
     .main .skills .skill .thumb {
         width: 120px;
@@ -804,7 +837,7 @@ footer .copyright .contenedor p {
 
     footer .contacto .contenedor .formulario .btn {
         
-        margin: auto 155px;
+        margin: 20px 215px auto 215px;
     }
 
     footer .contacto    input[type="text"],
@@ -823,6 +856,12 @@ footer .copyright .contenedor p {
 
 @media screen and (max-width: 500px) {
 
+    header .logo .logo-Nombre {
+        font-size: 12px;
+    }
+    header .menu-responsivo {
+        margin-left: 150px;
+    }
     .main .skills .skill .thumb {
         width: 120px;
         height: 70px;
@@ -850,7 +889,7 @@ footer .copyright .contenedor p {
 
     footer .contacto .contenedor .formulario .btn {
         
-        margin: auto 150px;
+        margin: 20px 150px auto 150px;
     }
 
     footer .contacto    input[type="text"],
@@ -872,6 +911,7 @@ footer .copyright .contenedor p {
     .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
         width: 220px;
         height: 150px;
+        margin-left: 35px;
           
     }
 
@@ -879,6 +919,7 @@ footer .copyright .contenedor p {
         width: 350px;
         height: 150px;
         margin-top: 30px;
+        margin-left: 25px;
     }
     
     .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre {
@@ -886,6 +927,10 @@ footer .copyright .contenedor p {
         margin-left: -320px;
         margin-top: 200px;
       
+    }
+
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .nombre_convertidor {
+        margin-left: -350px;
     }
 
     .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria {
@@ -896,12 +941,19 @@ footer .copyright .contenedor p {
     .main .experiencia_profesional .contenedor_experiencia .experiencia .botones {
         margin-top: 280px;
         margin-left: -320px;
+        margin-right: 100px;
         
     }
 
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_Hotel {
+       
+        margin-left: 50px;
+    }
+    
+
     footer .contacto .contenedor .formulario .btn {
         
-        margin:  auto;
+        margin: 20px auto auto auto;
         width: 100%;
     }
 
