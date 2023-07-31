@@ -1,28 +1,4 @@
-/*const NameField= document.querySelector("[name=nombre]");
-const emailField= document.querySelector("[name=correo]");
-const asuntoField= document.querySelector("[name=asunto]");
-const mensajeField= document.querySelector("[name=mensaje]");
-
-const validateEmptyField = (e) => {
-    const field = e.target;
-    const fieldValue = e.target.value;
-
-    if(fieldValue.trim().length == 0){
-        field.classList.add("invalid");
-        field.nextElementSibling.classList.add("error");
-      //  field.nextElementSibling.innerText= message;
-    }else {
-        field.classList.remove("invalid");
-        field.nextElementSibling.classList.remove("error");
-      //  field.nextElementSibling.innerText= message;
-    }
-
-}
-NameField.addEventListener("blur",  validateEmptyField);
-emailField.addEventListener("blur",  validateEmptyField);
-asuntoField.addEventListener("blur",  validateEmptyField);
-mensajeFieldField.addEventListener("blur", (e) => validateEmptyField); */
-const btnEnviar = document.querySelector('.btn');
+/*const btnEnviar = document.querySelector('.btn');
 window.addEventListener('load', () => {
 
   const formulario = document.querySelector('#formulario');
@@ -50,6 +26,7 @@ window.addEventListener('load', () => {
 
     //validar lo del boton
     let camposValidos = true;
+
     //validacion del campo nombre
     if (!nombreValor) {
       validacionFallo(nombre, 'Campo Vacío')
@@ -147,4 +124,83 @@ window.addEventListener('load', () => {
 
 
 
-});
+}); */
+
+const formulario = document.getElementById('formulario');
+const nombre = document.getElementById('nombre');
+const correo = document.getElementById('correo');
+const asunto = document.getElementById('asunto');
+const mensaje = document.getElementById('mensaje');
+const btnEnviar = document.querySelector('.btn')
+
+// formulario.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   // validarCampos();
+
+// });
+
+btnEnviar.disabled = true;
+
+
+//validación cantidad de caracteres mensaje
+const validateMessageField = (e) => {
+  const field = e.target;
+  const fieldValue = field.value;
+  if (fieldValue.trim().length > 10) {
+    fieldValue.classList.add('falla');
+    fieldValue.nextElementSibling.classList.add('error');
+    fieldValue.nextElementSibling.innerText = `${nombre} demasiado largo (máximo 50 caracteres)`;
+    
+  }else {
+    validateEmptyField;
+  }
+}
+//validaciones para los inputs y textarea
+const validateEmptyField = (e) => {
+  const field = e.target;
+  const fieldValue = e.target.value;
+
+  if (fieldValue.trim().length === 0) {
+    field.classList.add('falla');
+    field.nextElementSibling.classList.add('error');
+    field.nextElementSibling.innerText = `${field.name} requerido`;
+    btnEnviar.disabled = true;
+    
+  }else {
+    field.classList.remove('falla')
+    field.nextElementSibling.classList.remove('error');
+    field.nextElementSibling.innerText = '';
+    btnEnviar.disabled = false;
+
+  }
+
+}
+
+//validacion para el correo
+const validateEmailFormat = (e) => {
+  const field = e.target;
+  const fieldValue = field.value.trim();
+  const regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+  if (fieldValue.length > 0 && !regex.test(fieldValue)) {
+    
+    field.classList.add('falla')
+    field.nextElementSibling.classList.add('error');
+    field.nextElementSibling.innerText = `please enter a valid email`;
+    btnEnviar.disabled = true;
+  }else {
+    field.classList.remove('falla');
+    field.nextElementSibling.classList.remove('error');
+    field.nextElementSibling.innerText = '';
+    btnEnviar.disabled = false;
+  }
+  
+
+}
+
+nombre.addEventListener('blur', validateEmptyField);
+correo.addEventListener('blur', validateEmptyField);
+asunto.addEventListener('blur', validateEmptyField);
+mensaje.addEventListener('blur', validateEmptyField);
+
+correo.addEventListener('input', validateEmailFormat);
+mensaje.addEventListener('input', validateMessageField);
