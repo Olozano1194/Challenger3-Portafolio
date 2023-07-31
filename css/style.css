@@ -11,7 +11,7 @@ body {
     font-size: 16px;
 }
 
-.contenedor{
+.contenedor-menu{
     width: 90%;
     max-width: 1000px;
     margin: auto;
@@ -43,18 +43,32 @@ header .logo .logo-Nombre {
     
 }
 
+header #menu-responsive {
+    display: none;
+}
+
+header .menu-responsivo {
+    width: 35px;
+}
+
+header label {
+    cursor: pointer;
+    display: none;
+}
+
 header .menu {
     list-style: none;
     text-align: right;
-    margin: -20px auto;
-    
+    margin: -30px auto;
 }
 
 header li {
+    
     display: inline-block;
 }
 
 header .menu li a {
+    
     color: #383534;
     margin: 0 10px; 
     font-size: 1em;
@@ -265,10 +279,6 @@ header .redes_sociales .curriculo:hover {
     margin: 0 20px;
 }
 
-/*.main .hobies .futbol:hover {
-    background: #f5992a;
-} */
-
 .main .hobies .descripcion {
     text-align: center;
 }
@@ -339,9 +349,6 @@ header .redes_sociales .curriculo:hover {
     margin-bottom: 20px;
     
 }
-
-
-
 
 /*----------------------Experiencia profesional*/
 
@@ -476,7 +483,7 @@ footer .contacto .p-contacto {
 footer .contacto .contenedor-input{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     
 }
 
@@ -484,27 +491,29 @@ footer .contacto .form-control input {
     border: none;
 }
 
-footer .contacto .form-control.falla input {
-    border: 0.1px solid;
-    border-color: red;
+footer .falla{
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+   
 }
 
-footer .contacto .form-control.ok input {
+footer .contacto .form-control .ok input {
     
-    border: 0.1px solid;
-    border-color: #08ffc8;
+    border: solid 1px #08ffc8;
+    border-color: 0 0 10px #08ffc8;
 } 
 
-footer .contacto .form-control p {
+footer .error {
     visibility: hidden;
     position: absolute;
     font-size: small;
     font-weight: 500;
     margin-top: -2.5rem;
     text-align: right;
+    
 }
 
-footer .contacto .form-control.falla p {
+footer .error {
     visibility: visible; 
     color: #e80c3c;
 }
@@ -523,7 +532,7 @@ footer .contacto   textarea {
 footer .contacto   input[type="text"]:focus,
 footer .contacto   input[type="email"]:focus,
 footer .contacto   textarea:focus {
-    border: 2px solid #3895ea;
+    border: 1px solid #3895ea;
 }
 
 footer .contacto    input[type="text"],
@@ -579,12 +588,19 @@ footer .copyright .contenedor p {
 }
 
 /*--------------------Responsive--------------*/
+@media screen and (max-width: 942px) {
+
+    header .menu {
+       margin: 10px;
+    }
+
+}
 
 @media screen and (max-width: 900px) {
     
-    header .contenedor_logo_menu .menu {
+    /* header .contenedor_logo_menu .menu {
         display: none;
-    }
+    } */
 
     header .contenedor_logo_menu .logo {
         text-align: center;
@@ -620,8 +636,6 @@ footer .copyright .contenedor p {
         width: 765px;
         
     }
-
-       
 }
 
 @media screen and (max-width: 800px) {
@@ -668,6 +682,49 @@ footer .copyright .contenedor p {
 }
 
 @media screen and (max-width: 700px){
+    /* input #menu, img .menu-icon, label for:menu, ul .menu, li .item*/
+    header .menu {
+        padding: 30px;
+        margin: 0;
+    }
+
+    header .primera_linea {
+        margin-top: 140px;
+    }
+
+    header .li-respon {
+        margin-bottom: 0;
+        
+    }
+
+    header .menu a:hover{
+        border-bottom: transparent;
+    }
+
+    header .menu {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+        
+        
+    }
+
+    header .oculto {
+        display: none;
+    }
+    header .menu-responsivo {
+        margin-left: 280px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header li {
+        margin: 0 0 20px 0;
+        width: 50%;
+    }
 
     header .contenedor .textos .primera_linea, .segunda_linea {
         padding: 20px 0;
