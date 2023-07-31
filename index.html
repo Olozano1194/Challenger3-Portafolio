@@ -15,23 +15,31 @@
 
 <body>
     <header>
-        <div class="contenedor">
+        <div class="contenedor-menu">
             <div class="contenedor_logo_menu">
                 <div class="logo">
                     <a href="#">
                         <img src="./img/logoOscar1.jpeg" alt="logo">
                     </a>
                     <p class="logo-Nombre">Oscar Eduardo Lozano Bocanegra</p>
+
+                    <input type="checkbox" id="menu-responsive">
+                    <label for="menu-responsive">
+                        <img src="./img/menu.png" alt="" class="menu-responsivo">
+                    </label>
+                    
                 </div>
                 
-
-                <nav class="menu">
-                    <li><a href="#">Sobre mi</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Hobies</a></li>
-                    <li><a href="#">Formación</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Contacto</a></li>
+                <nav class="menu oculto">
+                    <ul >
+                        <li class="li-respon"><a href="#" id="btn_sobreMi">Sobre mi</a></li>
+                        <li class="li-respon"><a href="#" id="btn_Skills">Skills</a></li>
+                        <li class="li-respon"><a href="#" id="btn_Hobbies">Hobies</a></li>
+                        <li class="li-respon"><a href="#" id="btn_Formacion">Formación</a></li>
+                        <li class="li-respon"><a href="#" id="btn_Proyectos">Proyectos</a></li>
+                        <li class="li-respon"><a href="#" id="btn_Contacto">Contacto</a></li>
+                    </ul>
+                    
                 </nav>
             </div>
 
@@ -64,7 +72,7 @@
     </header>
 
     <section class="main">
-        <section class="sobre_mi">
+        <section class="sobre_mi" id="sobreMi">
             <div class="contenedor">
                 <div class="foto_perfil">
                     <img src="./img/foto_perfil.jpeg" alt="foto perfil">
@@ -83,7 +91,7 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skill">
             <div class="contenedor">
                 <h3 class="titulo">Skills</h3>
                 <div class="contenedor_skills">
@@ -131,7 +139,7 @@
             </div>
         </section>
 
-        <section class="hobbies">
+        <section class="hobbies" id="hobbie">
             <div class="contenedor">
                 <h3 class="titulo">Hobbies</h3>
                 <div class="contenedor_hoobies">
@@ -180,7 +188,7 @@
             </div>
         </section>
 
-        <section class="formacion_academica">
+        <section class="formacion_academica" id="formacionAcademica">
             <div class="contenedor">
                 <h3 class="titulo">Formación académica</h3>
                 <div class="contenedor_academica">
@@ -237,7 +245,7 @@
             </div>
         </section>
 
-        <section class="experiencia_profesional">
+        <section class="experiencia_profesional" id="experienciaProfesional">
             <div class="contenedor">
                 <h3 class="titulo">Experiencia profesional</h3>
                 <div class="contenedor_experiencia">
@@ -320,7 +328,7 @@
     </section>
 
     <footer>
-        <section class="contacto">
+        <section class="contacto" id="contacto">
             <div class="contenedor">
                 <h3 class="titulo">Contacto</h3>
                 <p class="p-contacto">¿Quieres contactarme?</p>
@@ -330,7 +338,7 @@
 
                     <div class="contenedor-input">
 
-                        <div class="form-control falla">
+                        <div class="form-control ">
                             <input type="text" id="nombre"  name="nombre" class="nombre nombre_correcto nombre_incorrecto" data-tipo="nombre" placeholder="Nombre" >
                             <p></p>
                         </div>
@@ -365,6 +373,9 @@
         </section>
 
     </footer>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/efectos.js"></script>
+    <script src="./js/parallax.js"></script>
      <script src="/js/validaciones.js"></script> 
      
 </body>
