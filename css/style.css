@@ -9,6 +9,8 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
+    max-width: 1200px;
+    
 }
 
 .contenedor-menu{
@@ -92,19 +94,17 @@ header .textos {
 header .textos .primera_linea,
 header .textos .segunda_linea {
     padding: 10px;
-    
-
 }
 
 header .redes_sociales {
-    padding: 60px 0;
+    padding: 30px 0;
         
 }
 
 header .redes_sociales .contenedor {
     display: flex;
     justify-content: center;
-    margin: -120px 0;
+    margin: -90px 0;
 
 }
 
@@ -142,16 +142,14 @@ header .redes_sociales .curriculo:hover {
 
 .main .sobre_mi {
     text-align: center;
-}
-
-.main .sobre_mi .foto {
-    margin-top: -60px;
+    background: #e0dada;
 }
 
 .main .sobre_mi img {
     vertical-align: top;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.2);
+    margin-top: 20px;
 }
 
 .main .sobre_mi .texto {
@@ -169,6 +167,11 @@ header .redes_sociales .curriculo:hover {
     font-weight: 300;
     color: #464646;
     text-align: center;
+    
+}
+
+.main .sobre_mi .texto p {
+    padding: 10px;
     
 }
 
@@ -385,11 +388,11 @@ header .redes_sociales .curriculo:hover {
 }
 
 .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
-   
     width: 452px;
     height: 406;
     vertical-align: top;
     border-radius: 3px;
+    margin-left: 20px;
     
 }
 
@@ -400,7 +403,7 @@ header .redes_sociales .curriculo:hover {
 .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre {
     font-weight: 400;
     color: #3895ea;
-    margin-left: -300px;
+    margin-left: -550px;
     margin-right: 50px;
     margin-bottom: 10px;
 }
@@ -408,7 +411,7 @@ header .redes_sociales .curriculo:hover {
 .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria {
     font-size: 14px;
     color: #636363;
-    margin-left: -315px;
+    margin-left: -565px;
     margin-right: 30px;
     margin-bottom: 10px;
 }
@@ -455,6 +458,11 @@ header .redes_sociales .curriculo:hover {
      
 }
 
+.main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_convertidor, .btn_Hotel{
+    margin-right: 50px;
+
+}
+
 /*-------------------------footer------------*/
 
 footer .contenedor {
@@ -472,6 +480,7 @@ footer .contacto .titulo {
 }
 
 footer .contacto .p-contacto {
+    margin-left: 100px;
     padding: 20px 0;
 }
 
@@ -565,7 +574,7 @@ footer .contacto .form-control .p-textarea {
 }
 
 footer .contacto  .btn {
-    margin: 25px 410px ;
+    margin: 25px 510px ;
     background: #3895ea;
     color: #fff;
     border: none;
