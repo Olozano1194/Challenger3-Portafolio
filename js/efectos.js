@@ -1,5 +1,6 @@
 let sobreMi=$('#sobreMi').offset().top;
 let skill= $('#skill').offset().top;
+let softSkills= $('#softSkill').offset().top;
 let hobbie= $('#hobbie').offset().top;
 let formacionAcademica= $('#formacionAcademica').offset().top;
 let experienciaProfesional= $('#experienciaProfesional').offset().top;
@@ -18,6 +19,14 @@ let contacto= $('#contacto').offset().top;
             scrollTop: skill
         }, 500);
     });
+
+    $('#btn_SoftSkills').on('click', function(e){
+        e.preventDefault();
+        $("html, body").animate({
+            scrollTop: softSkills
+        }, 500);
+    });
+
 
     $('#btn_Hobbies').on('click', function(e){
         e.preventDefault();
