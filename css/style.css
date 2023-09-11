@@ -9,7 +9,8 @@
 body {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 16px;
-    max-width: 1200px;
+    max-width: 1500px;
+    margin-left: 120px;
     
 }
 
@@ -175,35 +176,45 @@ header .redes_sociales .curriculo:hover {
     
 }
 
-/*-------------------Skills----------------*/
+/*-------------------Skills and Soft Skills and Hobbies----------------*/
 
-.main .skills {
+/*
+secion = section
+div = contenedor
+div = titulo
+div = contenedor_div
+div = div
+div = descripcion
+p = categoria
+*/
+
+.main .section {
     background:  #f2f2f2;
     padding: 30px 0;
 }
 
-.main .skills .contenedor {
+.main .section .contenedor {
     background: #d5d8dc;
     overflow: hidden;
 }
 
-.main .skills .titulo {
+.main .section .titulo {
     font-size: 34px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     font-weight: 300;
     color: #464646;
     text-align: center;
 }
 
-.main .contenedor_skills {
+.main .contenedor_div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.main .skill a {
+.main .div a {
     color: #969c9c;
     display: block;
     width: 100%;
@@ -214,85 +225,35 @@ header .redes_sociales .curriculo:hover {
 
 }
 
-.main .skills .contenedor_skills .skill .thumb .html:hover {
+.main .section .contenedor_div .div .thumb .html:hover {
     background: #f5992a;
 }
 
-.main .skills .contenedor_skills .skill .thumb .js:hover {
+.main .section .contenedor_div .div .thumb .js:hover {
     background: #d3c70b;
 }
 
-.main .skills .contenedor_skills .skill .thumb .css:hover {
+.main .section .contenedor_div .div .thumb .css:hover {
     background: #0992fc;
 }
 
-.main .skills .contenedor_skills .skill .thumb .node:hover {
+.main .section .contenedor_div .div .thumb .node:hover {
     background: #1e9542;
 }
 
-.main .skills .contenedor_skills .skill .thumb .python:hover {
+.main .section .contenedor_div .div .thumb .python:hover {
     background: #fcde46;
 }
 
-.main .skills .contenedor_skills .skill .descripcion {
+.main .section .contenedor_div .div .descripcion {
     text-align: center;
 }
 
-.main .skills .contenedor_skills .skill .descripcion .categoria {
+.main .section .contenedor_div .div .descripcion .categoria {
     font-weight: 400;
     color: #3895ea;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
-}
-
-/*-------------------------hobbies-------------------*/
-
-.main .hobbies {
-    background:  #f2f2f2;
-    padding: 30px 0;
-}
-
-.hobbies .contenedor {
-    background: #d5d8dc;
-    overflow: hidden;
-    padding: 20px 0;
-   
-}
-
-.hobbies .titulo {
-    font-family: 'Open Sans', arial, sans-serif;
-    font-size: 34px;
-    margin-bottom: 40px;
-    font-weight: 300;
-    color: #464646;
-    text-align: center;
-}
-
-.main .contenedor_hoobies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.main .hobies a {
-    color: #969c9c;
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    font-size: 40px;
-    margin: 0 20px;
-}
-
-.main .hobies .descripcion {
-    text-align: center;
-}
-
-.main .hobies .descripcion .categoria {
-    font-weight: 400;
-    color: #3895ea;
-    margin-bottom: 10px;
 }
 
 /*----------------------Formacion academica-----------*/
@@ -310,7 +271,7 @@ header .redes_sociales .curriculo:hover {
 
 .main .formacion_academica .titulo {
     font-size: 34px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     font-weight: 300;
     color: #464646;
     text-align: center;
@@ -369,7 +330,7 @@ header .redes_sociales .curriculo:hover {
 
 .main .experiencia_profesional .titulo {
     font-size: 34px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     font-weight: 300;
     color: #464646;
     text-align: center;
@@ -434,7 +395,7 @@ header .redes_sociales .curriculo:hover {
     color: #fff;
     background: #333;
     border: none;
-     
+
 }
 
 .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_demo {
@@ -442,7 +403,7 @@ header .redes_sociales .curriculo:hover {
     width: 17%;
     height: 50px;
     border-radius: 5px;
-   
+
     font-style: normal;
     font-size: 16px;
     font-weight: 400;
@@ -455,13 +416,9 @@ header .redes_sociales .curriculo:hover {
     color: #fff;
     background: #636363;
     border: none;
-     
-}
-
-.main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_convertidor, .btn_Hotel{
-    margin-right: 50px;
 
 }
+
 
 /*-------------------------footer------------*/
 
@@ -480,7 +437,7 @@ footer .contacto .titulo {
 }
 
 footer .contacto .p-contacto {
-    margin-left: 100px;
+    margin-left: 40px;
     padding: 20px 0;
 }
 
@@ -573,14 +530,23 @@ footer .contacto .form-control .p-textarea {
     margin-top: -0.5rem;
 }
 
+.contenedor-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
 footer .contacto  .btn {
-    margin: 25px 510px ;
+    
     background: #3895ea;
     color: #fff;
     border: none;
     border-radius: 3px;
     padding: 15px 40px;
     cursor: pointer;
+    
 }
 
 footer .contacto  .btn:hover {
@@ -921,7 +887,6 @@ footer .copyright .contenedor p {
         width: 220px;
         height: 150px;
         margin-left: 35px;
-          
     }
 
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img  {
