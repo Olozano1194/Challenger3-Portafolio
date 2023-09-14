@@ -62,7 +62,7 @@ header label {
 header .menu {
     list-style: none;
     text-align: right;
-    margin: -30px auto;
+    margin-left: 310px;
 }
 
 header li {
@@ -73,12 +73,12 @@ header li {
 header .menu li a {
     
     color: #383534;
-    margin: 0 10px; 
-    font-size: 1em;
+    /* margin: 10px 0 5px;  */
+    margin: 0 5px;
+    font-size: 16.5px;
     padding-bottom: 9px;
     display: block;
     text-decoration: none;
-    padding: 5px;
     border-bottom: 2px solid transparent; 
 }
 
@@ -214,6 +214,10 @@ p = categoria
     justify-content: space-evenly;
 }
 
+/* .main .section .contenedor_div .div .thumb {
+    text-align: center;
+} */
+
 .main .div a {
     color: #969c9c;
     display: block;
@@ -246,7 +250,9 @@ p = categoria
 }
 
 .main .section .contenedor_div .div .descripcion {
+    
     text-align: center;
+    
 }
 
 .main .section .contenedor_div .div .descripcion .categoria {
@@ -377,6 +383,7 @@ p = categoria
     margin-bottom: 10px;
 }
 
+
 .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_repositorio{
     
     width: 17%;
@@ -455,7 +462,7 @@ footer .contacto .form-control input {
 footer .falla{
     border: solid 1px red;
     box-shadow: 0 0 10px red;
-   
+
 }
 
 footer .contacto .form-control .ok input {
@@ -500,7 +507,6 @@ footer .contacto    input[type="text"],
 footer .contacto    input[type="email"] {
     width: 450px;
     margin-bottom: 45px;
-   
 }
 
 footer .contacto   textarea {
@@ -558,84 +564,91 @@ footer .copyright .contenedor p {
 }
 
 /*--------------------Responsive--------------*/
-@media screen and (max-width: 942px) {
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-left: 0px;
+    }
+
+    /* .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre {
+        margin-left: -400px;
+    }
+
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria {
+    
+        margin-left: -420px;
+        
+    } */
+
+}
+
+@media screen and (max-width: 1007px) {
+    /* header .menu li a {
+        font-size: 16px;
+    } */
+
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .cate,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .name {
+        margin-left: -350px;
+    }
+
+    footer .contacto   textarea{
+        width: 880px;
+    }
+
+} /*este sirve*/
+
+@media screen and (max-width: 970px) {
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .cate,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .name {
+        margin-left: -300px;
+    }
+}/*este sirve*/
+
+@media screen and (max-width: 961px) {
 
     header .menu {
-       margin: 10px;
+        margin: 10px;
     }
+
+    footer .contacto    input[type="text"],
+    footer .contacto    input[type="email"] {
+        width: 400px;
+        
+}
 
 }
 
 @media screen and (max-width: 900px) {
-    
-    /* header .contenedor_logo_menu .menu {
-        display: none;
-    } */
-
-    header .contenedor_logo_menu .logo {
-        text-align: center;
-    }
-
-    header .contenedor_logo_menu p {
-        text-align: center;
-    }
-
-    .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
-        width: 170px;
-        height: 120px;
-    }
-
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
         width: 55%;
-        
-    }
-
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin: auto 310px;
-    }
-
-    footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
-
-        width: 370px;
     }
 
     footer .contacto   textarea {
-        width: 765px;
+        width: 800px;
         
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .cate2 {
+        margin-left: -250px; 
     }
 }
 
 @media screen and (max-width: 800px) {
 
-    .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
-        width: 152px;
-        height: 120px;
-        
-    }
-
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
-        width: 80%;
-        margin-top: 85px;
-       
+        width: 330px;
+        
     } 
     
-    .main .experiencia_profesional .botones {
-        
-        margin-top: 200px;
-        
-    } 
-
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin: auto 210px;
-    }
-
     footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
+    footer .contacto    input[type="email"] {
 
         width: 270px;
     }
@@ -651,11 +664,27 @@ footer .copyright .contenedor p {
     
 }
 
+@media screen and (max-width: 770px){
+        
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria {
+        margin-left: -200px; 
+    }
+
+    .section .div .thumb .img {
+        width: 60px;
+    }
+
+    .section .div .descripcion .cate {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 700px){
     /* input #menu, img .menu-icon, label for:menu, ul .menu, li .item*/
     header .menu {
         padding: 30px;
-        margin: 0;
+        margin: 15px;
     }
 
     header .primera_linea {
@@ -663,7 +692,7 @@ footer .copyright .contenedor p {
     }
 
     header .li-respon {
-        margin-bottom: 0;
+        margin-bottom: 1px;
         
     }
 
@@ -705,42 +734,21 @@ footer .copyright .contenedor p {
         margin-top: 20px;
     }
 
-    .main .formacion_academica .descripcion .nombre {
-        margin-right: -15px;
-        margin-top: 20px;
-    }
-
-    .main .formacion_academica .descripcion .categoria{
-        margin-right: -10px;
-        
-    }
-    
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
-        width: 90%;
-        margin-top: 85px;
-       /* margin-right: 1000px; */
-    }
-    
-    .main .experiencia_profesional .botones {
-        
-        margin-top: 120px;
+        width: 280px;
         
     }
 
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .django {
+        margin-left: -150px;
+    }
+    
     .main .experiencia_profesional .btn_repositorio {
         margin-right: 15px;
     }
 
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin-left: 270px;
-        margin-top: 20px;
-        
-    }
-
     footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
+    footer .contacto    input[type="email"]{
 
         width: 270px;
     }
@@ -777,48 +785,22 @@ footer .copyright .contenedor p {
         font-size: 14px;
     }
 
-    header .redes_sociales {
-       
-    }
-
     .main .sobre_mi .foto-perfil {
         margin-top: 30px;
-    }
-
-    .main .skills .skill .thumb {
-        width: 120px;
-        height: 70px;
-        
-    }
-
-    .main .hobbies .contenedor {
-        background: #fff;
-    }
-    .main .hobbies .hobies .thumb {
-        width: 120px;
-        height: 60px;
     }
 
     .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
         width: 300px;
         height: 150px;
-          
     }
 
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
-        width: 90%;
+        width: 190px;
         
-    }
-
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin: 20px 215px auto 215px;
     }
 
     footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
-
+    footer .contacto    input[type="email"]{
         width: 490px;
     }
 
@@ -837,39 +819,27 @@ footer .copyright .contenedor p {
     header .menu-responsivo {
         margin-left: 150px;
     }
-    .main .skills .skill .thumb {
-        width: 120px;
-        height: 70px;
-        
-    }
-
-    .main .hobbies .contenedor {
-        background: #fff;
-    }
-    .main .hobbies .hobies .thumb {
-        width: 120px;
-        height: 60px;
-    }
-
+    
     .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
         width: 300px;
         height: 150px;
-          
+    
     }
 
     .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img {
-        width: 90%;
-        
+        width: 140px;
     }
 
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin: 20px 150px auto 150px;
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre,
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria{
+        margin-left: -100px;
+    }
+    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .django {
+        margin-left: -98px;
     }
 
     footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
+    footer .contacto    input[type="email"]{
 
         width: 450px;
     }
@@ -881,70 +851,6 @@ footer .copyright .contenedor p {
 
 }
 
-@media screen and (max-width: 400px) {
-
-    .main .formacion_academica .contenedor .contenedor_academica .formacion_acade .thumb img {
-        width: 220px;
-        height: 150px;
-        margin-left: 35px;
-    }
-
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .thumb img  {
-        width: 350px;
-        height: 150px;
-        margin-top: 30px;
-        margin-left: 25px;
-    }
-    
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .nombre {
-        
-        margin-left: -320px;
-        margin-top: 200px;
-      
-    }
-
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .nombre_convertidor {
-        margin-left: -350px;
-    }
-
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .descripcion .categoria {
-        margin-left: -350px;
-        
-    }
-
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .botones {
-        margin-top: 280px;
-        margin-left: -320px;
-        margin-right: 100px;
-        
-    }
-
-    .main .experiencia_profesional .contenedor_experiencia .experiencia .botones .btn_Hotel {
-       
-        margin-left: 50px;
-    }
-    
-
-    footer .contacto .contenedor .formulario .btn {
-        
-        margin: 20px auto auto auto;
-        width: 100%;
-    }
-
-    footer .contacto    input[type="text"],
-    footer .contacto    input[type="email"],
-    footer .contacto   textarea {
-
-        width: 355px;
-    }
-
-    footer .contacto   textarea {
-        width: 355px;
-        
-    }
-
-
-}
 
 
 
